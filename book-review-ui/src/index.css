@@ -1,0 +1,207 @@
+/* ===== GLOBAL ===== */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background: linear-gradient(135deg, #1e1f29, #2a2d3e, #3b3f58);
+  background-size: 300% 300%;
+  animation: gradientMove 12s ease infinite;
+  color: #fff;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  max-width: 1300px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+h1 {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ===== STATS CARDS ===== */
+
+.stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 260px;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+}
+
+.stat-card h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+/* ===== SECTION HEADERS ===== */
+
+.section {
+  margin-top: 50px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-header h2 {
+  font-size: 26px;
+  margin: 0;
+}
+
+/* ===== BUTTONS ===== */
+
+.add-btn,
+.edit-btn,
+.delete-btn,
+.save-btn,
+.cancel-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.add-btn {
+  background: linear-gradient(135deg, #4caf50, #66d16f);
+  color: #fff;
+}
+
+.add-btn:hover {
+  filter: brightness(1.15);
+}
+
+.edit-btn {
+  background: #2196f3;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #0b7dda;
+}
+
+.delete-btn {
+  background: #f44336;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #d32f2f;
+}
+
+.save-btn {
+  background: #4caf50;
+  color: white;
+}
+
+.cancel-btn {
+  background: #777;
+  color: white;
+}
+
+/* ===== TABLE ===== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  backdrop-filter: blur(10px);
+}
+
+th {
+  background: rgba(255,255,255,0.15);
+  padding: 14px;
+  text-align: left;
+  font-size: 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+tr:hover td {
+  background: rgba(255,255,255,0.05);
+}
+
+/* ===== MODAL ===== */
+
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: rgba(255,255,255,0.12);
+  padding: 30px;
+  width: 420px;
+  border-radius: 16px;
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+}
+
+.modal input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+}
+
+.modal input::placeholder {
+  color: #ddd;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
